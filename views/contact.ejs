@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<%- include("header"); -%>
+<div class="container main-content" style="margin-top: 40px;">
+  <div class="card" style="max-width: 700px; margin: 0 auto;">
+    <div class="card-header">
+      <h1>Contacts</h1>
+    </div>
+    <div class="card-body">
+      <p style="font-size: 1.1em; margin-bottom: 18px;"><%= contacts %></p>
+      <div class="contact-links">
+        <ul style="list-style: none; padding: 0;">
+          <li>
+            <a href="https://github.com/Rithishkumar7" target="_blank">🌐 GitHub</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/rithish-janjeerapu-562a0229a" target="_blank">💼 LinkedIn</a>
+          </li>
+          <li>
+            <a href="mailto:rithishjanjeerapu007@email.com">✉️ Email</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("footer"); -%>
+</body>
+</html>
