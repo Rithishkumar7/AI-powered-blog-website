@@ -23,9 +23,14 @@ mongoose.connect(MONGODB_URI, {
 .catch(err => console.error("MongoDB connection error:", err));
 const postSchema = new mongoose.Schema({
     name: String,
-    description: String
-    });
-    const Post = mongoose.model('Post', postSchema);
+    description: String,
+    category: {
+        type: String,
+        enum: ['Technical', 'Personal', 'Travel', 'Food', 'Lifestyle', 'Business', 'Education', 'Other'],
+        default: 'Other'
+    }
+});
+const Post = mongoose.model('Post', postSchema);
   
 app.use(express.static(path.join(__dirname, '/blog-css')));
 app.get('/', async (req, res) => {
@@ -49,7 +54,8 @@ app.get('/posts/:postId', (req, res) => {
       if (post) {
         res.render("post", {
           name: post.name,
-          description: post.description
+          description: post.description,
+          category: post.category
         });
       } else {
         res.status(404).send("Post not found");
@@ -73,7 +79,8 @@ app.get('/compose',(req,res)=>{
 app.post('/compose',(req,res)=>{
     const Post1=new Post({
         name:req.body.name,
-        description:req.body.description
+        description:req.body.description,
+        category:req.body.category
     });
     
   Post1.save()
