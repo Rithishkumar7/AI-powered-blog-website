@@ -32,6 +32,17 @@
           <div class="card-body">
             <form class="form" action="/compose" method="post">
               <input type="text" name="name" placeholder="Enter Title" required><br>
+              <select name="category" required style="width: 100%; padding: 14px; margin: 10px 0; border: 1.5px solid var(--border); border-radius: 8px; font-size: 1rem; background: var(--card-bg); color: var(--text);">
+                <option value="">Select Category</option>
+                <option value="Technical">Technical</option>
+                <option value="Personal">Personal</option>
+                <option value="Travel">Travel</option>
+                <option value="Food">Food</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Business">Business</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+              </select><br>
               <textarea name="description" id="blog-description" placeholder="Enter Description" required></textarea><br>
               <button type="submit" title="Add">Publish</button>
             </form>
