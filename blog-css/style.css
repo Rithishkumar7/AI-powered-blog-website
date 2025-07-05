@@ -206,3 +206,59 @@ textarea {
   margin-bottom: 18px;
   font-size: 1.08em;
 }
+
+/* Category Badge Styles */
+.category-badge {
+  margin-bottom: 8px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.category-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(108,99,255,0.3);
+}
+
+/* Category-specific colors */
+.category-tag[data-category="Technical"] {
+  background: #2196F3;
+}
+
+.category-tag[data-category="Personal"] {
+  background: #9C27B0;
+}
+
+.category-tag[data-category="Travel"] {
+  background: #4CAF50;
+}
+
+.category-tag[data-category="Food"] {
+  background: #FF9800;
+}
+
+.category-tag[data-category="Lifestyle"] {
+  background: #E91E63;
+}
+
+.category-tag[data-category="Business"] {
+  background: #607D8B;
+}
+
+.category-tag[data-category="Education"] {
+  background: #795548;
+}
+
+.category-tag[data-category="Other"] {
+  background: #9E9E9E;
+}
